@@ -1,0 +1,98 @@
+{
+  "data": {
+    "authorization": [],
+    "token": [],
+    "user": [
+      {
+        "sub": "ZWNEKT-200-LDbjPj3OgkZZJTroIk14GtV6Fi32AhpjMchhEkfZcJQ=",
+        "auth_time": "1462521544",
+        "exp": "1462526202",
+        "aud": "GX2ctofNPHGyBzzFerFAXIjDDGRJqDLp",
+        "createdAt": "2016-05-06T00:03:27.177Z",
+        "updatedAt": "2016-05-06T08:16:42.840Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "authorization": {
+      "code": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "state": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "token": {
+      "access_token": {
+        "type": "string"
+      },
+      "refrech_token": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "sub": {
+        "type": "string"
+      },
+      "exp": {
+        "type": "string"
+      },
+      "auth_time": {
+        "type": "string"
+      },
+      "aud": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "authorization": {},
+    "token": {},
+    "user": {
+      "id": 1
+    }
+  }
+}
