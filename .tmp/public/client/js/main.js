@@ -18,10 +18,10 @@ MetronicApp.config(['$ocLazyLoadProvider', '$authProvider', function ($ocLazyLoa
     });
     $authProvider.oauth2({
         name: 'orange',
-        clientId:'GX2ctofNPHGyBzzFerFAXIjDDGRJqDLp',
+        clientId:'TmAj4uJ1omBKZGE8MuBZaMPjjCrGfUBd',
         url: 'auth/orange',
         authorizationEndpoint: 'https://api.orange.com/openidconnect/fr/v1/authorize',
-        redirectUri: 'http://ckeckandgo-orangegroup.rhcloud.com/auth/orange',
+        redirectUri: 'http://checkandgo-orangegroup.rhcloud.com/auth/orange',
         requiredUrlParams: ['scope'],
         optionalUrlParams: ['display', 'state'],
         scope: ['offline_access','profile', 'email'],
@@ -61,7 +61,7 @@ MetronicApp.factory('settings', ['$rootScope', function ($rootScope) {
 MetronicApp.controller('AppController', ['$scope', '$rootScope', function ($scope, $rootScope) {
     $scope.$on('$viewContentLoaded', function () {
         App.initComponents(); // init core components
-        //Layout.init(); //  Init entire layout(header, footer, sidebar, etc) on page load if the partials included in server side instead of loading with ng-include directive 
+        //Layout.init(); //  Init entire layout(header, footer, sidebar, etc) on page load if the partials included in server side instead of loading with ng-include directive
     });
 }]);
 
@@ -89,7 +89,7 @@ MetronicApp.controller('SidebarController', ['$scope', function ($scope) {
 MetronicApp.controller('QuickSidebarController', ['$scope', function ($scope) {
     $scope.$on('$includeContentLoaded', function () {
         setTimeout(function () {
-            QuickSidebar.init(); // init quick sidebar        
+            QuickSidebar.init(); // init quick sidebar
         }, 2000)
     });
 }]);

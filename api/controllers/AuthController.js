@@ -76,7 +76,7 @@ module.exports = {
               existingUser.auth_time = user_identity.auth_time;
               existingUser.aud = user_identity.aud[0];
               existingUser.save(function (err, s) {
-                return res.json({token: ''});
+                return res.json({token: token.id_token});
               });
             } else {
               var user = {};
@@ -88,7 +88,9 @@ module.exports = {
                 if (err)
                   return res.json(500, err);
                 if (user)
-                  res.json({token: ''});
+                  res.json({token: token.id_token});
+                if(!user)
+                  res.json(500,{error:'error'});
               });
             }
           });
@@ -97,7 +99,7 @@ module.exports = {
     });
   },
   index:function (req, res) {
-    return res.json({message:'API'});
+    return res.json({title:'API OIDC',description:'',version:'0.1'});
   }
 
 };
