@@ -35,7 +35,7 @@ module.exports.routes = {
   /*'/': {
     view: 'homepage'
   }*/
-  'GET /auth/orange':{
+  'POST /auth/orange':{
     controller:'AuthController',
     action:'authorization'
   },
