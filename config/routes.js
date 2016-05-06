@@ -38,6 +38,10 @@ module.exports.routes = {
   'GET /auth/orange':{
     controller:'AuthController',
     action:'authorization'
+  },
+  'GET /':{
+    controller:'AuthController',
+    action:'index'
   }
 
   /***************************************************************************
