@@ -55,15 +55,15 @@ module.exports = {
             if (existingUser) {
               return res.status(409).send({message: 'There is already a Orange account that belongs to you'});
             }
-            var token = req.header('Authorization').split(' ')[1];
-            var payload = jwt.decode(token, config.TOKEN_SECRET);
+            var token_jwt = req.header('Authorization').split(' ')[1];
+            var payload = jwt.decode(token_jwt, config.TOKEN_SECRET);
             User.findOne({sub: payload.sub}, function (err, user) {
               if (!user) {
                 return res.status(400).send({message: 'User not found'});
               }
               user.sub = user_identity.sub;
               User.create(user).exec();
-              res.send({token: token});
+              res.send({token: token_jwt});
             });
           });
         } else {
