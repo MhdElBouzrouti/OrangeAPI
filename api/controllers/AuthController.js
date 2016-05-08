@@ -75,7 +75,7 @@ module.exports = {
               existingUser.iat = user_identity.iat;
               existingUser.aud = user_identity.aud[0];
               existingUser.auth_code=authorization.code;
-              existingUser.acces_token=token.acces_token;
+              existingUser.access_token=token.access_token;
               existingUser.iss=user_identity.iss;
               existingUser.scope=token.scope;
               existingUser.save(function (err, s) {
@@ -88,7 +88,7 @@ module.exports = {
               user.iat = user_identity.iat;
               user.auth_time = user_identity.auth_time;
               user.exp = user_identity.exp;
-              user.acces_token = user_identity.access_token;
+              user.access_token = user_identity.access_token;
               user.auth_code=authorization.code;
               user.iss=user_identity.iss;
               user.aud = user_identity.aud[0];
