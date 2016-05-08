@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="portlet-body">
-          <div class="mt-element-step">
+          <div class="mt-element-step" ng-repeat="user in users">
             <div class="row step-line">
               <div class="mt-step-desc">
                 <div class="font-dark bold uppercase">4 Steps Line</div>
@@ -31,7 +31,9 @@
               <div class="col-md-3 mt-step-col first done">
                 <div class="mt-step-number bg-white">1</div>
                 <div class="mt-step-title uppercase font-grey-cascade">Authorization request</div>
-                <div class="mt-step-content font-grey-cascade">Lorem ipsum dolor sit amet</div>
+                <div class="mt-step-content font-grey-cascade">Authorization Code :{user.auth_code}</div>
+                <div class="mt-step-content font-grey-cascade">Authorization Time :{user.auth_time}</div>
+                <div class="mt-step-content font-grey-cascade">Scope :{user.scope}</div>
               </div>
               <div class="col-md-3 mt-step-col done">
                 <div class="mt-step-number bg-white">2</div>
