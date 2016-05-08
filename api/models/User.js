@@ -11,10 +11,25 @@ module.exports = {
     sub:{
       type:'string'
     },
+    auth_time:{
+      type:'string'
+    },
+    auth_code:{
+      type:'string'
+    },
+    iat:{
+      type:'string'
+    },
     exp:{
       type:'string'
     },
-    auth_time:{
+    scope:{
+      type:'string'
+    },
+    access_token:{
+      type:'string'
+    },
+    iss:{
       type:'string'
     },
     aud:{

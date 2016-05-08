@@ -7,9 +7,6 @@
 var request = require('request');
 module.exports = {
   authorization: function (req, res) {
-    if (!req.allParams().code) {
-      return res.json(400, {message: 'Authorization code Not found'});
-    }
     // Authorization
     var authorization = {
       code: req.allParams().code,
@@ -17,6 +14,7 @@ module.exports = {
       state: req.allParams().state
     };
     sails.log.info('Authorization Code : ' + authorization.code + ' | ' + ' Scope : ' + authorization.scope + ' | State : ' + authorization.state);
+    // data
     var data = 'code=' + authorization.code + '&' + 'redirect_uri=' + ConfigService.REDIRECT_URI + '&' + 'grant_type=authorization_code';
 
     // Step 1. Exchange authorization code for access token.
@@ -28,7 +26,7 @@ module.exports = {
     }, function (err, response) {
       if (err) {
         sails.log.error(err);
-        return res.json(500, err);
+        return res.json(500,{error:'error'});
       }
       var token = JSON.parse(response.body);
       if(token.error)
@@ -74,15 +72,25 @@ module.exports = {
             if (existingUser) {
               existingUser.exp = user_identity.exp;
               existingUser.auth_time = user_identity.auth_time;
+              existingUser.iat = user_identity.iat;
               existingUser.aud = user_identity.aud[0];
+              existingUser.auth_code=authorization.code;
+              existingUser.acces_token=token.acces_token;
+              existingUser.iss=user_identity.iss;
+              existingUser.scope=token.scope;
               existingUser.save(function (err, s) {
                 return res.json({token: token.id_token});
               });
             } else {
               var user = {};
               user.sub = user_identity.sub;
+              user.scope=user_identity.scope;
+              user.iat = user_identity.iat;
               user.auth_time = user_identity.auth_time;
               user.exp = user_identity.exp;
+              user.acces_token = user_identity.access_token;
+              user.auth_code=authorization.code;
+              user.iss=user_identity.iss;
               user.aud = user_identity.aud[0];
               User.create(user).exec(function (err, user) {
                 if (err)
