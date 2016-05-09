@@ -37,12 +37,12 @@
                         </div>
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element1">
-                            <div class="font-dark bold uppercase"> Time Authorization</div>
-                            <div class="font-dark bold uppercase">{{moment.unix(user.auth_time)._d}}</div>
-                            <div class="font-dark bold uppercase">Authorization code</div>
-                            <div class="font-dark bold uppercase">{{user.auth_code}}</div>
-                            <div class="font-dark bold uppercase">Scope </div>
-                            <div class="font-dark bold uppercase"> {{user.scope}}</div>
+                            <div class="font-dark bold uppercase">Date Of Authorization</div>
+                            <div class="font-green-jungle bold uppercase">{{user.auth_time | date:'yyy-MM-dd HH::mm:ss Z'}}</div>
+                            <div class="font-dark bold uppercase">Authorization code :</div>
+                            <div class="font-green-jungle bold uppercase">{{user.auth_code}}</div>
+                            <div class="font-dark bold uppercase">Scope :</div>
+                            <div class="font-green-jungle bold uppercase"> {{user.scope}}</div>
                           </div>
                         </div>
                         <div class="modal-footer">
