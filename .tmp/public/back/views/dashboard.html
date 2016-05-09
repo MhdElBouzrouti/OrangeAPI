@@ -14,12 +14,12 @@
           <div class="mt-element-step" ng-repeat="user in users">
             <div class="row step-line">
               <div class="mt-step-desc">
+                <div class="font-dark bold uppercase">Identity Provider</div>
+                <div class="font-green-jungle bold uppercase">{{user.iss}}</div>
                 <div class="font-dark bold uppercase">User ID</div>
                 <div class="font-green-jungle bold uppercase">{{user.sub}}</div>
-                <div class="caption-desc font-grey-cascade"> 4 Steps Numbered Line element style. Activate by adding
-                  <pre class="mt-code">.step-line</pre>
-                </div>
-                <br/>
+                <div class="font-dark bold uppercase">Client ID</div>
+                <div class="font-green-jungle bold uppercase">{{user.aud}}</div>
               </div>
               <div class="col-md-4 mt-step-col first done">
                 <div class="mt-step-number bg-white">1</div>
@@ -38,7 +38,7 @@
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element1">
                             <div class="font-dark bold uppercase">Date Of Authorization</div>
-                            <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy-MM-dd HH::mm:ss
+                            <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy/MM/dd HH::mm:sss
                               Z'}}
                             </div>
                             <div class="font-dark bold uppercase">Authorization code :</div>
@@ -76,12 +76,11 @@
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element2">
                             <div class="font-dark bold uppercase">generation:</div>
-                            <div class="font-dark bold uppercase">{{user.iat * 1000 | date:'yyyy-MM-dd HH::mm:ss
-                              Z'}}</div>
+                            <div class="font-dark bold uppercase">{{user.iat * 1000 | date:'yyyy/MM/dd HH:mm:sss Z'}}</div>
                             <div class="font-dark bold uppercase">Acess Token :</div>
                             <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
                               <div class="font-dark bold uppercase">Experation :</div>
-                              <div class="font-dark bold uppercase">{{user.exp * 1000 | date:'yyyy-MM-dd HH::mm::ss Z'}}</div>
+                              <div class="font-dark bold uppercase">{{user.exp * 1000 | date:'yyyy/MM/dd HH:mm:sss Z'}}</div>
                               {{user.access_token}}
                             </div>
                             <div class="modal-footer">
