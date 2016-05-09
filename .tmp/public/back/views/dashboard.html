@@ -33,19 +33,16 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                          <h4 class="modal-title">Modal Title</h4>
+                          <h4 class="modal-title">Authorization Details</h4>
                         </div>
                         <div class="modal-body">
-                          <p>
-                          </p>
-                          <p>
-                          </p>
                           <div id="blockui_sample_3_1_element1">
-                            <p>
                             <div class="font-dark bold uppercase"> Time Authorization</div>
-                            <div class="font-dark bold uppercase">{{moment.unix(user.auth_time)}}</div>
-                              Scope :{{user.scope}}
-                            </p>
+                            <div class="font-dark bold uppercase">{{moment.unix(user.auth_time)._d}}</div>
+                            <div class="font-dark bold uppercase">Authorization code</div>
+                            <div class="font-dark bold uppercase">{{user.auth_code}}</div>
+                            <div class="font-dark bold uppercase">Scope </div>
+                            <div class="font-dark bold uppercase"> {{user.scope}}</div>
                           </div>
                         </div>
                         <div class="modal-footer">
