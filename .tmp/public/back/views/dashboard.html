@@ -6,7 +6,7 @@
       <div class="portlet light portlet-fit ">
         <div class="portlet-title">
           <div class="caption">
-            <i class=" icon-layers font-yellow-gold"></i>
+            <i class=" fa fa-shield font-yellow-gold"></i>
             <span class="caption-subject font-yellow-gold bold uppercase">Orange Partner / OIDC </span>
           </div>
         </div>
@@ -14,18 +14,10 @@
           <div class="mt-element-step" ng-repeat="user in users">
             <div class="row step-line">
               <div class="mt-step-desc">
-                <div class="font-dark bold uppercase"></div>
+                <div class="font-dark bold uppercase">User ID</div>
+                <div class="font-green-jungle bold uppercase">{{user.sub}}</div>
                 <div class="caption-desc font-grey-cascade"> 4 Steps Numbered Line element style. Activate by adding
                   <pre class="mt-code">.step-line</pre>
-                  class to the
-                  <pre class="mt-code">.row</pre>
-                  element.
-                  <pre class="mt-code">.first</pre>
-                  and
-                  <pre class="mt-code">.last</pre>
-                  classes are required to be added into
-                  <pre class="mt-code">.mt-step-col</pre>
-                  to indicate the first and last step.
                 </div>
                 <br/>
               </div>
