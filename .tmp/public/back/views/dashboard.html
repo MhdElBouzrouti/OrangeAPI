@@ -27,21 +27,16 @@
                   <pre class="mt-code">.mt-step-col</pre>
                   to indicate the first and last step.
                 </div>
-                <br/></div>
+                <br/>
+              </div>
               <div class="col-md-4 mt-step-col first done">
                 <div class="mt-step-number bg-white">1</div>
                 <div class="mt-step-title uppercase font-grey-cascade">Authorization request</div>
                 <div class="mt-step-content font-grey-cascade">
-                </div>
-              </div>
-              <div class="col-md-4 mt-step-col done">
-                <div class="mt-step-number bg-white">2</div>
-                <div class="mt-step-title uppercase font-grey-cascade">Authentication & Consent</div>
-                <div class="mt-step-content font-grey-cascade">
                   <p>
-                    <a class="btn red" data-toggle="modal" href="#basic">Details</a>
+                    <a class="btn red" data-toggle="modal" href="#basic1">Details</a>
                   </p>
-                  <div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
+                  <div class="modal fade" id="basic1" tabindex="-1" role="basic1" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -53,7 +48,7 @@
                           </p>
                           <p>
                           </p>
-                          <div id="blockui_sample_3_1_element">
+                          <div id="blockui_sample_3_1_element1">
                             <p>
                               Time Authorization :{{user.auth_time}}
                               Scope :{{user.scope}}
@@ -70,20 +65,74 @@
                     <!-- /.modal-dialog -->
 
                   </div>
-                  <div class="mt-step-content font-grey-cascade"><span class="label label-info">User ID</span> <br>{{user.sub}}
-                  </div>
-                  <div class="mt-step-content font-grey-cascade"><span
-                    class="label label-info">Access Token</span><br><span class="label label-default"
-                                                                          style="word-wrap: break-word;">{{user.access_token}}</span>
-                  </div>
-                  <div class="mt-step-content font-grey-cascade"><span
-                    class="label label-info">Access Token exp</span><br>{{user.exp}}
+                </div>
+              </div>
+              <div class="col-md-4 mt-step-col done">
+                <div class="mt-step-number bg-white">2</div>
+                <div class="mt-step-title uppercase font-grey-cascade">Authentication & Consent</div>
+                <div class="mt-step-content font-grey-cascade">
+                  <p>
+                    <a class="btn red" data-toggle="modal" href="#basic2">Details</a>
+                  </p>
+                  <div class="modal fade" id="basic2" tabindex="-1" role="basic2" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                          </p>
+                          <p>
+                          </p>
+                          <div id="blockui_sample_3_1_element2">
+                            <p>
+                              Time Authorization :{{user.auth_time}}
+                              Scope :{{user.scope}}
+                              Scope :{{user.scope}}
+
+                            </p>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+
                   </div>
                 </div>
-                <div class="col-md-4 mt-step-col last">
-                  <div class="mt-step-number bg-white">3</div>
-                  <div class="mt-step-title uppercase font-grey-cascade">Launch</div>
-                  <div class="mt-step-content font-grey-cascade">Lorem ipsum dolor sit amet</div>
+              </div>
+              <div class="col-md-4 mt-step-col last">
+                <div class="mt-step-number bg-white">3</div>
+                <div class="mt-step-title uppercase font-grey-cascade">API</div>
+                <div class="mt-step-content font-grey-cascade">
+                  <p>
+                    <a class="btn red" data-toggle="modal" href="#basic3">Details</a>
+                  </p>
+                  <div class="modal fade" id="basic3" tabindex="-1" role="basic3" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                          <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div id="blockui_sample_3_1_element3">
+                            <p>
+
+                            </p>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,9 +141,10 @@
       </div>
     </div>
   </div>
-  <!-- END MAIN CONTENT -->
-  <!-- BEGIN MAIN JS & CSS -->
-  <script>
-    Dashboard.init();
-  </script>
-  <!-- BEGIN MAIN JS & CSS -->
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+  Dashboard.init();
+</script>
+<!-- BEGIN MAIN JS & CSS -->
