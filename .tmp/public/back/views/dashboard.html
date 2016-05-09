@@ -38,7 +38,7 @@
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element1">
                             <div class="font-dark bold uppercase">Date Of Authorization</div>
-                            <div class="font-green-jungle bold uppercase">{{user.auth_time | date:'yyyy-MM-dd HH::mm:ss
+                            <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy-MM-dd HH::mm:ss
                               Z'}}
                             </div>
                             <div class="font-dark bold uppercase">Authorization code :</div>
@@ -74,12 +74,16 @@
                           <h4 class="modal-title">Tokens</h4>
                         </div>
                         <div class="modal-body">
-                          <p>
-                          </p>
-                          <p>
-                          </p>
                           <div id="blockui_sample_3_1_element2">
-
+                            <div class="font-dark bold uppercase">generation:</div>
+                            <div class="font-dark bold uppercase">{{user.iat * 1000 | date:'yyyy-MM-dd HH::mm:ss
+                              Z'}}</div>
+                            <div class="font-dark bold uppercase">Acess Token :</div>
+                            <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
+                              <div class="font-dark bold uppercase">Experation :</div>
+                              <div class="font-dark bold uppercase">{{user.exp*1000 || date:'yyy-MM-dd HH::mm::ss Z'}}</div>
+                              {{user.access_token}}
+                            </div>
                             <div class="modal-footer">
                             </div>
                           </div>
@@ -108,10 +112,7 @@
                         </div>
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element3">
-                            <div class="font-dark bold uppercase">Acess Token :</div>
-                            <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
-                              {{user.access_token}}
-                            </div>
+
                           </div>
                         </div>
                         <div class="modal-footer">
