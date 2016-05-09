@@ -38,49 +38,15 @@
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element1">
                             <div class="font-dark bold uppercase">Date Of Authorization</div>
-                            <div class="font-green-jungle bold uppercase">{{user.auth_time | date:'yyy-MM-dd HH::mm:ss Z'}}</div>
+                            <div class="font-green-jungle bold uppercase">{{user.auth_time | date:'yyyy-MM-dd HH::mm:ss
+                              Z'}}
+                            </div>
                             <div class="font-dark bold uppercase">Authorization code :</div>
-                            <div class="font-green-jungle bold uppercase">{{user.auth_code}}</div>
+                            <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
+                              {{user.auth_code}}
+                            </div>
                             <div class="font-dark bold uppercase">Scope :</div>
                             <div class="font-green-jungle bold uppercase"> {{user.scope}}</div>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                        </div>
-                      </div>
-                      <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mt-step-col done">
-                <div class="mt-step-number bg-white">2</div>
-                <div class="mt-step-title uppercase font-grey-cascade">Exchanging Auth Code by tokens</div>
-                <div class="mt-step-content font-grey-cascade">
-                  <p>
-                    <a class="btn yellow-gold" data-toggle="modal" href="#basic2">Details</a>
-                  </p>
-                  <div class="modal fade" id="basic2" tabindex="-1" role="basic2" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                          <h4 class="modal-title">Modal Title</h4>
-                        </div>
-                        <div class="modal-body">
-                          <p>
-                          </p>
-                          <p>
-                          </p>
-                          <div id="blockui_sample_3_1_element2">
-                            <p>
-                              Time Authorization :{{user.auth_time}}
-                              Scope :{{user.scope}}
-                              Scope :{{user.scope}}
-
-                            </p>
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -109,9 +75,10 @@
                         </div>
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element3">
-                            <p>
-
-                            </p>
+                            <div class="font-dark bold uppercase">Acess Token :</div>
+                            <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
+                              {{user.access_token}}
+                            </div>
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -123,16 +90,48 @@
                   </div>
                 </div>
               </div>
+              <div class="col-md-4 mt-step-col done">
+                <div class="mt-step-number bg-white">2</div>
+                <div class="mt-step-title uppercase font-grey-cascade">Exchanging Auth Code by tokens</div>
+                <div class="mt-step-content font-grey-cascade">
+                  <p>
+                    <a class="btn yellow-gold" data-toggle="modal" href="#basic2">Details</a>
+                  </p>
+                  <div class="modal fade" id="basic2" tabindex="-1" role="basic2" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                          <h4 class="modal-title">Tokens</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                          </p>
+                          <p>
+                          </p>
+                          <div id="blockui_sample_3_1_element2">
+
+                            <div class="modal-footer">
+                            </div>
+                          </div>
+                          <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- END MAIN CONTENT -->
-<!-- BEGIN MAIN JS & CSS -->
-<script>
-  Dashboard.init();
-</script>
-<!-- BEGIN MAIN JS & CSS -->
+  <!-- END MAIN CONTENT -->
+  <!-- BEGIN MAIN JS & CSS -->
+  <script>
+    Dashboard.init();
+  </script>
+  <!-- BEGIN MAIN JS & CSS -->
