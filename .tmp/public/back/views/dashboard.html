@@ -1,6 +1,5 @@
 <!-- BEGIN MAIN CONTENT -->
 <div ng-controller="DashboardController">
-
   <div class="row">
     <div class="col-md-12">
       <div class="portlet light portlet-fit ">
@@ -38,15 +37,14 @@
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element1">
                             <div class="font-dark bold uppercase">Date Of Authorization</div>
-                            <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy/MM/dd HH::mm:sss
-                              Z'}}
-                            </div>
+                            <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy/MM/dd
+                              HH:mm:sss Z'}}</div>
+                            <div class="font-dark bold uppercase">Scope :</div>
+                            <div class="font-green-jungle bold uppercase"> {{user.scope}}</div>
                             <div class="font-dark bold uppercase">Authorization code :</div>
                             <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
                               {{user.auth_code}}
                             </div>
-                            <div class="font-dark bold uppercase">Scope :</div>
-                            <div class="font-green-jungle bold uppercase"> {{user.scope}}</div>
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -71,18 +69,23 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                          <h4 class="modal-title">Tokens</h4>
+                          <h4 class="modal-title font-dark">Tokens</h4>
                         </div>
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element2">
                             <div class="font-dark bold uppercase">generation:</div>
-                            <div class="font-dark bold uppercase">{{user.iat * 1000 | date:'yyyy/MM/dd HH:mm:sss Z'}}</div>
-                            <div class="font-dark bold uppercase">Acess Token :</div>
+                            <div class="font-green-jungle bold uppercase">{{user.iat * 1000 | date:'yyyy/MM/dd HH:mm:sss
+                              Z'}}
+                            </div>
+                            <div class="font-dark bold uppercase">Access Token :</div>
                             <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
-                              <div class="font-dark bold uppercase">Experation :</div>
-                              <div class="font-dark bold uppercase">{{user.exp * 1000 | date:'yyyy/MM/dd HH:mm:sss Z'}}</div>
                               {{user.access_token}}
                             </div>
+                            <div class="font-dark bold uppercase">Experation :</div>
+                            <div class="font-green-jungle bold uppercase">{{user.exp * 1000 | date:'yyyy/MM/dd HH:mm:sss
+                              Z'}}
+                            </div>
+
                             <div class="modal-footer">
                             </div>
                           </div>
@@ -123,7 +126,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
