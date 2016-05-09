@@ -38,8 +38,8 @@
                           <div id="blockui_sample_3_1_element1">
                             <div class="font-dark bold uppercase">Date Of Authorization</div>
                             <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy/MM/dd
-                              HH:mm:sss Z'}}</div>
-                            <div class="font-dark bold uppercase">Scope :</div>
+                              HH:mm:ss Z'}}</div>
+                            <div class="font-dark bold uppercase">Scopes :</div>
                             <div class="font-green-jungle bold uppercase"> {{user.scope}}</div>
                             <div class="font-dark bold uppercase">Authorization code :</div>
                             <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
@@ -73,16 +73,16 @@
                         </div>
                         <div class="modal-body">
                           <div id="blockui_sample_3_1_element2">
-                            <div class="font-dark bold uppercase">generation:</div>
-                            <div class="font-green-jungle bold uppercase">{{user.iat * 1000 | date:'yyyy/MM/dd HH:mm:sss
+                            <div class="font-dark bold uppercase">Creation Date:</div>
+                            <div class="font-green-jungle bold uppercase">{{user.iat * 1000 | date:'yyyy/MM/dd HH:mm:ss
                               Z'}}
                             </div>
                             <div class="font-dark bold uppercase">Access Token :</div>
                             <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
                               {{user.access_token}}
                             </div>
-                            <div class="font-dark bold uppercase">Experation :</div>
-                            <div class="font-green-jungle bold uppercase">{{user.exp * 1000 | date:'yyyy/MM/dd HH:mm:sss
+                            <div class="font-dark bold uppercase">Expiration Date :</div>
+                            <div class="font-green-jungle bold uppercase">{{user.exp * 1000 | date:'yyyy/MM/dd HH:mm:ss
                               Z'}}
                             </div>
 
