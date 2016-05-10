@@ -85,9 +85,8 @@
             <table class="table table-hover table-light">
               <thead>
               <tr class="uppercase">
-                <th colspan="4"> USER </th>
+                <th colspan="2"> USER </th>
                 <th> ID </th>
-                <th>Date of Auth</th>
                 <th> Scopes </th>
               </tr>
               </thead>
@@ -98,10 +97,7 @@
                   <a href="javascript:;" class="primary-link">{{user.name}}</a>
                 </td>
                 <td> {{user.sub}}</td>
-                <td> </td>
-                <td>
-                  <span class="bold theme-font">80%</span>
-                </td>
+                <td> {{user.scope}}</td>
               </tr>
             </table>
           </div>
