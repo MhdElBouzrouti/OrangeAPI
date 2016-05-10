@@ -49,6 +49,7 @@ module.exports = {
         if (response.body.error) {
           return res.json(500,response.body.error);
         }
+        sails.log.info(response.body);
         var user_name=response.body.name;
 
         // Step 3a. Link user accounts.
