@@ -34,16 +34,16 @@ module.exports = {
         return res.json(400,token);
       }
       var accessToken = token.access_token;
-      sails.log.debug(token);
+      sails.log.info(token);
       var user_identity = JSON.parse(new Buffer((token.id_token.split('.')[1]), 'base64').toString('ascii'));
-      sails.log.debug(user_identity);
+      sails.log.info(user_identity);
       // sails.log.info('Access Token : '+accessToken + '| Id Token : ' + token.id_token );
       var headers = {Authorization: 'Bearer ' + accessToken};
 
       // Step 2. Retrieve profile information about the current user.
       request.get({url: ConfigService.USER_INFO_URL, headers: headers}, function (err, response) {
         if (err) {
-          sails.log.debug(response.body);
+          sails.log.info(response.body);
           return res.json(500, {message: ''});
         }
         if (response.body.error) {
