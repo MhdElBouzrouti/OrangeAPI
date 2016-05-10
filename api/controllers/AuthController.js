@@ -50,7 +50,7 @@ module.exports = {
           return res.json(500,response.body.error);
         }
         sails.log.info(response.body);
-        var user_name=response.body.name;
+        var user_name=JSON.parse(response.body).name;
 
         // Step 3a. Link user accounts.
         if (req.header('Authorization')) {
