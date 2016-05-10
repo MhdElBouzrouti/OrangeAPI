@@ -11,6 +11,9 @@ module.exports = {
     sub:{
       type:'string'
     },
+    name:{
+      type:'string'
+    },
     auth_time:{
       type:'string'
     },

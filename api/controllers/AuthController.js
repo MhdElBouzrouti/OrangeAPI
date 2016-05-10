@@ -39,7 +39,7 @@ module.exports = {
       sails.log.debug(user_identity);
       // sails.log.info('Access Token : '+accessToken + '| Id Token : ' + token.id_token );
       var headers = {Authorization: 'Bearer ' + accessToken};
-
+      var user_name="";
       // Step 2. Retrieve profile information about the current user.
       request.get({url: ConfigService.USER_INFO_URL, headers: headers}, function (err, response) {
         if (err) {
@@ -49,6 +49,8 @@ module.exports = {
         if (response.body.error) {
           return res.json(500,response.body.error);
         }
+        user_name=response.body.name;
+
         // Step 3a. Link user accounts.
         if (req.header('Authorization')) {
           User.findOne({sub: user_identity.sub}, function (err, existingUser) {
@@ -74,6 +76,7 @@ module.exports = {
               existingUser.auth_time = user_identity.auth_time;
               existingUser.iat = user_identity.iat;
               existingUser.aud = user_identity.aud[0];
+              existingUser.name=user_name;
               existingUser.auth_code=authorization.code;
               existingUser.access_token=token.access_token;
               existingUser.iss=user_identity.iss;
@@ -87,6 +90,7 @@ module.exports = {
               user.scope=user_identity.scope;
               user.iat = user_identity.iat;
               user.auth_time = user_identity.auth_time;
+              user.name=user_name;
               user.exp = user_identity.exp;
               user.access_token = user_identity.access_token;
               user.auth_code=authorization.code;
