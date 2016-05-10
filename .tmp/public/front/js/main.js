@@ -24,7 +24,7 @@ MetronicApp.config(['$ocLazyLoadProvider','$authProvider', function($ocLazyLoadP
     redirectUri: 'http://checkandgo-orangegroup.rhcloud.com/auth/orange',
     requiredUrlParams: ['scope'],
     optionalUrlParams: ['display', 'state'],
-    scope: ['check_id','form_filling'],
+    scope: ['profile','address','phone','email'],
     scopePrefix: 'openid',
     scopeDelimiter: ' ',
     display: 'popup',
@@ -419,7 +419,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         // User Profile Dashboard
         .state("profile.dashboard", {
             url: "/dashboard",
-            templateUrl: "views/profile/dashboard.html",
+            templateUrl: "views/profile/oidc.html",
             data: {pageTitle: 'User Profile'}
         })
 

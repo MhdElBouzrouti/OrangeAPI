@@ -1,137 +1,146 @@
 <!-- BEGIN MAIN CONTENT -->
 <div ng-controller="DashboardController">
   <div class="row">
-    <div class="col-md-12">
-      <div class="portlet light portlet-fit ">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <a class="dashboard-stat dashboard-stat-v2 blue" href="#">
+        <div class="visual">
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span data-counter="counterup" data-value="1349">{{users_length}}</span>
+          </div>
+          <div class="desc"> Users Authentificated</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <a class="dashboard-stat dashboard-stat-v2 yellow-crusta" href="#">
+        <div class="visual">
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span data-counter="counterup" data-value="1349">25</span>
+          </div>
+          <div class="desc"> APIs Called</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <a class="dashboard-stat dashboard-stat-v2 green-jungle" href="#">
+        <div class="visual">
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span data-counter="counterup" data-value="1349">11</span>
+          </div>
+          <div class="desc"> Authentificated Users</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <a class="dashboard-stat dashboard-stat-v2 yellow-gold" href="#">
+        <div class="visual">
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span data-counter="counterup" data-value="1349">11</span>
+          </div>
+          <div class="desc"> Authentificated Users</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="portlet light portlet-fit">
         <div class="portlet-title">
           <div class="caption">
-            <i class=" fa fa-shield font-yellow-gold"></i>
-            <span class="caption-subject font-yellow-gold bold uppercase">Orange Partner / OIDC </span>
+            <i class=" icon-layers font-green"></i>
+            <span class="caption-subject font-green bold uppercase">API CALL</span>
           </div>
         </div>
         <div class="portlet-body">
-          <div class="mt-element-step" ng-repeat="user in users">
-            <div class="row step-line">
-              <div class="mt-step-desc">
-                <div class="font-dark bold uppercase">Identity Provider</div>
-                <div class="font-green-jungle bold uppercase">{{user.iss}}</div>
-                <div class="font-dark bold uppercase">User ID</div>
-                <div class="font-green-jungle bold uppercase">{{user.sub}}</div>
-                <div class="font-dark bold uppercase">Client ID</div>
-                <div class="font-green-jungle bold uppercase">{{user.aud}}</div>
-              </div>
-              <div class="col-md-4 mt-step-col first done">
-                <div class="mt-step-number bg-white">1</div>
-                <div class="mt-step-title uppercase font-grey-cascade">Retrieve Authorization Code</div>
-                <div class="mt-step-content font-grey-cascade">
-                  <p>
-                    <a class="btn btn-circle yellow-gold" data-toggle="modal" href="#basic1">Details</a>
-                  </p>
-                  <div class="modal fade" id="basic1" tabindex="-1" role="basic1" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                          <h4 class="modal-title font-dark bold">Authorization Details</h4>
-                        </div>
-                        <div class="modal-body">
-                          <div id="blockui_sample_3_1_element1">
-                            <div class="font-dark bold uppercase">Date Of Authorization</div>
-                            <div class="font-green-jungle bold uppercase">{{user.auth_time*1000 | date:'yyyy/MM/dd
-                              HH:mm:ss Z'}}
-                            </div>
-                            <div class="font-dark bold uppercase">Scopes :</div>
-                            <div class="font-green-jungle bold uppercase"> {{user.scope}}</div>
-                            <div class="font-dark bold uppercase">Authorization code :</div>
-                            <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
-                              {{user.auth_code}}
-                            </div>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                        </div>
-                      </div>
-                      <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mt-step-col done">
-                <div class="mt-step-number bg-white">2</div>
-                <div class="mt-step-title uppercase font-grey-cascade">Exchanging Auth Code by tokens</div>
-                <div class="mt-step-content font-grey-cascade">
-                  <p>
-                    <a class="btn btn-circle yellow-gold" data-toggle="modal" href="#basic2">Details</a>
-                  </p>
-                  <div class="modal fade" id="basic2" tabindex="-1" role="basic2" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                          <h4 class="modal-title font-dark bold">Token Details</h4>
-                        </div>
-                        <div class="modal-body">
-                          <div id="blockui_sample_3_1_element2">
-                            <div class="font-dark bold uppercase">Creation Date:</div>
-                            <div class="font-green-jungle bold uppercase">{{user.iat * 1000 | date:'yyyy/MM/dd HH:mm:ss Z'}}
-                            </div>
-                            <div class="font-dark bold uppercase">Access Token :</div>
-                            <div class="font-green-jungle bold uppercase" style="word-wrap: break-word;">
-                              {{user.access_token}}
-                            </div>
-                            <div class="font-dark bold uppercase">Expiration Date :</div>
-                            <div class="font-green-jungle bold uppercase">{{user.exp * 1000 | date:'yyyy/MM/dd HH:mm:ss
-                              Z'}}
-                            </div>
-
-                            <div class="modal-footer">
-                            </div>
-                          </div>
-                          <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mt-step-col last">
-                <div class="mt-step-number bg-white">3</div>
-                <div class="mt-step-title uppercase font-grey-cascade">Call API Ressource</div>
-                <div class="mt-step-content font-grey-cascade">
-                  <p>
-                    <a class="btn btn-circle yellow-gold" data-toggle="modal" href="#basic3">Details</a>
-                  </p>
-                  <div class="modal fade" id="basic3" tabindex="-1" role="basic3" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                          <h4 class="modal-title">Modal Title</h4>
-                        </div>
-                        <div class="modal-body">
-                          <div id="blockui_sample_3_1_element3">
-
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                        </div>
-                      </div>
-                      <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                  </div>
-                </div>
-              </div>
-            </div>
+          <canvas id="line" class="chart chart-line" chart-data="data_api"
+                  chart-labels="labels_api" chart-legend="true" chart-series="series_api" chart-colours="colours"
+          >
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div class="portlet light ">
+        <div class="portlet-title">
+          <div class="caption caption-md">
+            <i class="icon-bar-chart font-dark hide"></i>
+            <span class="caption-subject font-dark bold uppercase">User Details</span>
+            <span class="caption-helper">Global stats...</span>
+          </div>
+        </div>
+        <div class="portlet-body">
+          <div class="table-scrollable table-scrollable-borderless">
+            <table class="table table-hover table-light">
+              <thead>
+              <tr class="uppercase">
+                <th colspan="2"> USER </th>
+                <th> ID </th>
+                <th>Date of Auth</th>
+                <th> Scopes </th>
+                <th> RATE </th>
+              </tr>
+              </thead>
+              <tr>
+                <td class="fit">
+                  <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg"> </td>
+                <td>
+                  <a href="javascript:;" class="primary-link">Brain</a>
+                </td>
+                <td> $345 </td>
+                <td> 45 </td>
+                <td> 124 </td>
+                <td>
+                  <span class="bold theme-font">80%</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fit">
+                  <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg"> </td>
+                <td>
+                  <a href="javascript:;" class="primary-link">Nick</a>
+                </td>
+                <td> $560 </td>
+                <td> 12 </td>
+                <td> 24 </td>
+                <td>
+                  <span class="bold theme-font">67%</span>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="portlet light portlet-fit">
+        <div class="portlet-title">
+          <div class="caption">
+            <i class=" icon-layers font-green"></i>
+            <span class="caption-subject font-green bold uppercase">Scopes</span>
+          </div>
+        </div>
+        <div class="portlet-body">
+          <canvas id="doughnut" class="chart chart-doughnut" chart-data="data_scope" chart-labels="labels_scope" chart-colours="colours" chart-legend="true"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- END MAIN CONTENT -->
   <!-- BEGIN MAIN JS & CSS -->
   <script>
