@@ -92,30 +92,17 @@
                 <th> RATE </th>
               </tr>
               </thead>
-              <tr>
+              <tr ng-repeat="user in users">
                 <td class="fit">
-                  <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg"> </td>
+                  <img class="user-pic rounded" src="../assets/pages/media/pages/avatar.png"> </td>
                 <td>
-                  <a href="javascript:;" class="primary-link">Brain</a>
+                  <a href="javascript:;" class="primary-link">{{user.name}}</a>
                 </td>
-                <td> $345 </td>
-                <td> 45 </td>
+                <td> {{user.sub}}</td>
+                <td> </td>
                 <td> 124 </td>
                 <td>
                   <span class="bold theme-font">80%</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="fit">
-                  <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg"> </td>
-                <td>
-                  <a href="javascript:;" class="primary-link">Nick</a>
-                </td>
-                <td> $560 </td>
-                <td> 12 </td>
-                <td> 24 </td>
-                <td>
-                  <span class="bold theme-font">67%</span>
                 </td>
               </tr>
             </table>
