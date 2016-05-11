@@ -24,7 +24,7 @@ MetronicApp.config(['$ocLazyLoadProvider','$authProvider', function($ocLazyLoadP
     redirectUri: 'http://checkandgo-orangegroup.rhcloud.com/auth/orange',
     requiredUrlParams: ['scope'],
     optionalUrlParams: ['display', 'state'],
-    scope: ['profile','address','phone','email'],
+    scope: ['offline_access','profile','address','phone','email'],
     scopePrefix: 'openid',
     scopeDelimiter: ' ',
     display: 'popup',
