@@ -1,4 +1,4 @@
-angular.module('MetronicApp').controller('IdentityController', function($rootScope, $scope, $http, $timeout,$auth) {
+angular.module('DemoOrange').controller('IdentityController', function($rootScope, $scope, $http, $timeout,$auth) {
     $scope.$on('$viewContentLoaded', function() {
         // initialize core components
         App.initAjax();

@@ -3,7 +3,7 @@ GLobal Directives
 ***/
 
 // Route State Load Spinner(used on page or content load)
-MetronicApp.directive('ngSpinnerBar', ['$rootScope',
+DemoOrangeDH.directive('ngSpinnerBar', ['$rootScope',
     function($rootScope) {
         return {
             link: function(scope, element, attrs) {
@@ -20,11 +20,11 @@ MetronicApp.directive('ngSpinnerBar', ['$rootScope',
                     element.addClass('hide'); // hide spinner bar
                     $('body').removeClass('page-on-load'); // remove page loading indicator
                     Layout.setSidebarMenuActiveLink('match'); // activate selected link in the sidebar menu
-                   
+
                     // auto scorll to page top
                     setTimeout(function () {
                         App.scrollTop(); // scroll to the top on content load
-                    }, $rootScope.settings.layout.pageAutoScrollOnLoad);     
+                    }, $rootScope.settings.layout.pageAutoScrollOnLoad);
                 });
 
                 // handle errors
@@ -42,7 +42,7 @@ MetronicApp.directive('ngSpinnerBar', ['$rootScope',
 ])
 
 // Handle global LINK click
-MetronicApp.directive('a', function() {
+DemoOrangeDH.directive('a', function() {
     return {
         restrict: 'E',
         link: function(scope, elem, attrs) {
@@ -56,10 +56,10 @@ MetronicApp.directive('a', function() {
 });
 
 // Handle Dropdown Hover Plugin Integration
-MetronicApp.directive('dropdownMenuHover', function () {
+DemoOrangeDH.directive('dropdownMenuHover', function () {
   return {
     link: function (scope, elem) {
       elem.dropdownHover();
     }
-  };  
+  };
 });
